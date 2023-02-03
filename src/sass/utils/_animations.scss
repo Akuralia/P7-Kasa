@@ -1,0 +1,57 @@
+
+// Animation Arrow à l'ouverture
+@-webkit-keyframes flip-horizontal-bottom {
+    0% {
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0);
+    }
+    100% {
+      -webkit-transform: rotateX(-180deg);
+              transform: rotateX(-180deg);
+    }
+  }
+  @keyframes flip-horizontal-bottom {
+    0% {
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0);
+    }
+    100% {
+      -webkit-transform: rotateX(-180deg);
+              transform: rotateX(-180deg);
+    }
+  }
+  
+// Animation arrow à la fermeture
+
+
+// Animation du texte à l'ouverture
+
+@-webkit-keyframes fade-in-top {
+    0% {
+      -webkit-transform: translateY(-43px);
+              transform: translateY(-43px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+      z-index: -1;
+    }
+  }
+  @keyframes fade-in-top {
+    0% {
+      -webkit-transform: translateY(-43px);
+              transform: translateY(-43px);
+      opacity: 0;
+      height: auto;
+    }
+    100% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+      opacity: 1;
+      z-index: -1;
+      height: auto;
+    }
+  }
+  

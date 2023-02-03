@@ -1,0 +1,56 @@
+@import '../utils/variables';
+
+  .accordion__title {
+    display: flex;
+    position:relative ;
+    margin: 31px auto 31px auto;
+    align-items: center;
+    justify-content: space-between;
+    background: $primary-text-color;
+    max-width: 975px;
+    height: 47px;
+    font-size: 24px;
+    padding-left: 18px;
+    padding-right: 30px;
+    color:$secondary-text-color ;
+    border-radius: 8px;
+    z-index: 1;
+  }
+  
+  .accordion__title:hover,
+  .active .accordion__title {
+    cursor: pointer;
+  }
+  
+  .active .accordion__icon {
+	-webkit-animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  }
+.false .accordion__icon {
+
+  }
+
+
+  
+  .accordion__content {
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    border-radius: 0 0 8px 8px;
+  }
+  
+  .active .accordion__content {
+    margin: -40px auto auto auto;
+    padding: 36px 27px 19px 18px;
+    max-width: 978px;
+    max-height: 168px;
+    visibility: visible;
+    overflow: visible;
+    opacity: 1;
+    background-color: grey;
+    color:$primary-text-color;
+    font-size: 24px;
+	-webkit-animation: fade-in-top 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: fade-in-top 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  }

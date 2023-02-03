@@ -1,0 +1,29 @@
+@import '../utils/variables';
+
+
+.notfound_main{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 159px;
+    h1{
+        color: $primary-text-color;
+        font-size: 288px;
+        font-weight: bold;
+    }
+
+    p{
+        margin: -170px 0 182px 0;
+        font-size: 36px;
+        color: $primary-text-color;
+        font-weight: medium;
+    }
+
+    span{
+        font-size: 18px;
+        color: $primary-text-color;
+        font-weight: medium;
+        text-decoration: underline;
+        
+    }
+}

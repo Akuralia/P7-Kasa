@@ -1,0 +1,28 @@
+@import '../utils/variables';
+
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px auto auto auto ;
+    max-width: 1240px;
+    height: 223px;
+    background-image: url("../../assets/img/banner.svg");
+    background-repeat: no-repeat;
+    
+    p{
+    font-size: 54px;
+    color: $secondary-text-color;
+    }
+}
+
+.about_banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px auto auto auto ;
+    max-width: 1240px;
+    height: 223px;
+    background-image: url("../../assets/img/about_banner.svg");
+    background-repeat: no-repeat;
+}

@@ -1,7 +1,6 @@
+import React from "react";
 import { NavLink } from 'react-router-dom';
-
 import logo from '../assets/img/logo.svg'
-import '../styles/Navigation.scss'
 
 export default function navbar() {
 
@@ -28,7 +27,7 @@ return(
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/a_propos" className="nav_link" style={({isActive}) =>
+                        <NavLink to="/about" className="nav_link" style={({isActive}) =>
                                 isActive ? activeStyle : undefined
                             }
                         >

@@ -18,7 +18,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "server": "json-server -p 4000 -w ./src/assets/data.json",
+    "lodging": "json-server -p 4000 -w ./src/assets/lodging.json",
+    "about": "json-server -p 4200 -w ./src/assets/about.json",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

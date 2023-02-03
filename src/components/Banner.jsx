@@ -1,6 +1,4 @@
-import banner from '../assets/img/banner.svg'
-import '../styles/Banner.scss'
-import '../styles/Fonts.scss'
+import React from "react";
 
 export default function Banner() {
 return(

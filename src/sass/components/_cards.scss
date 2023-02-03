@@ -1,0 +1,51 @@
+@import '../utils/variables';
+
+.lodging_container{
+    margin: 30px auto 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    background-color: $secondary-background-color;
+    max-width: 1240px;
+    padding: 56px 50px 56px 50px;
+    border-radius: 30px ;
+}
+
+.lodging_card{
+    display: flex;
+
+    a{
+    text-decoration: none;
+    }
+    img{
+        opacity: 1;
+        max-width:340px;
+        min-width: 255px;
+        max-height: 340px;
+        min-height: 335px;
+        border-radius: 12px;
+    }
+    div {
+
+        justify-content: flex-start;
+        align-items: center;
+        display: flex;
+        border: red 3px solid;
+        max-width: 300px;
+        max-height: 52px;
+        margin-top: -70px;
+        margin-left: 15px;
+        
+        p{
+            font-weight: 500;
+            font-size: 18px;
+            color: $secondary-text-color;
+        }
+    }
+
+    &:hover{
+        transform: scale(1.04);
+        transition-duration: 400ms;
+    }
+}
