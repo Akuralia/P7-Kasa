@@ -1,7 +1,7 @@
 import Navbar from '../components/Navigation';
 import Banner from '../components/Banner';
-import Main from '../components/Main';
-
+import Cards from '../components/Cards';
+import Footer from '../components/Footer';
 
 
 
@@ -13,7 +13,8 @@ return(
     <>
     <Navbar />
     <Banner />
-    <Main />
+    <Cards />
+    <Footer />
     </>
     )
 }

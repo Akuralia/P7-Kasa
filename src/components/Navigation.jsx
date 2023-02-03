@@ -1,7 +1,15 @@
+import { NavLink } from 'react-router-dom';
+
 import logo from '../assets/img/logo.svg'
 import '../styles/Navigation.scss'
 
 export default function navbar() {
+
+let activeStyle = {
+    textDecoration: "underline",
+};
+
+
 return(
     <>
     <header>
@@ -11,8 +19,23 @@ return(
             </div>
             <div>
                 <ul>
-                    <li><a href='#'>Acceuil</a></li>
-                    <li><a href='#'>A Propos</a></li>
+                    <li>
+                        <NavLink to="/" className="nav_link" style={({isActive}) =>
+                                isActive ? activeStyle : undefined
+                            }
+                        >
+                            Acceuil
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/a_propos" className="nav_link" style={({isActive}) =>
+                                isActive ? activeStyle : undefined
+                            }
+                        >
+                            A Propos
+                        </NavLink>
+                    </li>
+
                 </ul>
             </div>
         </nav>

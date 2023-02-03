@@ -1,0 +1,41 @@
+.lodging_container{
+    margin: 30px auto auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    background-color: #F6F6F6 ;
+    max-width: 1240px;
+    padding: 56px 50px 56px 50px;
+    border-radius: 30px ;
+}
+
+.lodging_card{
+    display: flex;
+
+    a{
+    text-decoration: none;
+    }
+    img{
+        opacity: 1;
+        max-width:340px;
+        min-width: 255px;
+        max-height: 340px;
+        min-height: 335px;
+        border-radius: 12px;
+    }
+    div {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        justify-content: flex-start;
+        align-items: center;
+        display: flex;
+        border: red 3px solid;
+        max-width: 300px;
+        max-height: 52px;
+        margin-top: -70px;
+        margin-left: 15px;
+        color: white;
+    }
+}

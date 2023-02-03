@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {
+import { 
   createBrowserRouter,
-  RouterProvider,
+  Route,
+  createRoutesFromElements,
+  RouterProvider
 } from "react-router-dom";
 
 import './styles/index.scss'
@@ -11,12 +13,11 @@ import Home from './pages/Home';
 import Apropos from './pages/Apropos';
 import Logement from './pages/Logement';
 import NotFound from './pages/NotFound';
+import Api, { apiLoader } from './api/Api';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />
-  },
+const router = createBrowserRouter(
+  createRoutesFromElements(
+  <Route path='/' element={<Home />} loader={apiLoader} />
   // {
   //   path: "/a_propos",
   //   element: <Apropos />
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
   //   path: "/404",
   //   element: <NotFound />
   // },
-]);
+));
 
 
 
