@@ -1,29 +1,26 @@
 import React from "react";
 import Navbar from '../components/Navigation';
-import AboutBanner from '../components/Banner-about';
+import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import Accordion from "../components/Accordion"
 import { useLoaderData} from 'react-router-dom'
 
 
 
-export default function Apropos() {
+export default function About() {
     const data = useLoaderData();
-    console.log(data)
     return(
         <>
         <Navbar />
-        <AboutBanner />
+        <Banner className="about_banner" />
         <div className="accordions">
-            {data.map( about => (
-            <div className="accordions">
+            {data.map((about, index) => (
                 <Accordion 
                     title={about.header} 
                     content={about.description} 
-                    key={about.id}>
+                    key={index}>
                 </Accordion>
-            </div>
-            ))};
+            ))}
         </div>
         <Footer />
         </>

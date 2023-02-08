@@ -1,6 +1,6 @@
 @import '../utils/variables';
 
-  .accordion__title {
+  .accordion_title {
     display: flex;
     position:relative ;
     margin: 31px auto 31px auto;
@@ -17,22 +17,17 @@
     z-index: 1;
   }
   
-  .accordion__title:hover,
-  .active .accordion__title {
+  .accordion_title:hover,
+  .active .accordion_title {
     cursor: pointer;
   }
   
-  .active .accordion__icon {
-	-webkit-animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-	animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  .active .accordion_icon {
+	-webkit-animation: flip-horizontal-bottom 0.3s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: flip-horizontal-bottom 0.3s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
   }
-.false .accordion__icon {
-
-  }
-
-
   
-  .accordion__content {
+  .accordion_content {
     visibility: hidden;
     height: 0;
     opacity: 0;
@@ -40,7 +35,7 @@
     border-radius: 0 0 8px 8px;
   }
   
-  .active .accordion__content {
+  .active .accordion_content {
     margin: -40px auto auto auto;
     padding: 36px 27px 19px 18px;
     max-width: 978px;
@@ -48,7 +43,7 @@
     visibility: visible;
     overflow: visible;
     opacity: 1;
-    background-color: grey;
+    background-color: $secondary-background-color;
     color:$primary-text-color;
     font-size: 24px;
 	-webkit-animation: fade-in-top 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;

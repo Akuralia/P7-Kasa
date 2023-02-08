@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Banner() {
+export default function Banner({className}) {
 return(
     <>
-    <div className='banner'>
+    <div className={className} >
         <p> Chez vous, partout et ailleurs</p>
     </div>
     </>

@@ -1,0 +1,29 @@
+@import '../utils/variables';
+
+.carrousel_container{
+    position: relative;
+    margin: 20px auto 30px auto;
+    max-width: 1240px ;
+    max-height: 415px;
+    min-width: 335px;
+    min-height: 255px;
+}
+
+.carrousel_content{
+    position: relative;
+
+    max-width: 1240px ;
+    max-height: 415px;
+    min-width: 335px;
+    min-height: 255px;
+    background-color: bisque;
+
+    img{
+        position: absolute;
+    object-fit: cover;
+    }
+}
+
+.arrow_next{
+background-color: black;
+}

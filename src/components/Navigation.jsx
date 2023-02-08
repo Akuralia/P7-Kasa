@@ -23,7 +23,7 @@ return(
                                 isActive ? activeStyle : undefined
                             }
                         >
-                            Acceuil
+                            Accueil
                         </NavLink>
                     </li>
                     <li>

@@ -6,6 +6,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm install`
+
+To init the project and get all the modules of this project.
+
+### `npm run api`
+
+Run the JSON-Server to call the API
+
 ### `npm start`
 
 Runs the app in the development mode.\

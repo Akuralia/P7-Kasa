@@ -4,17 +4,15 @@
     margin: 30px auto 40px auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
     background-color: $secondary-background-color;
-    max-width: 1240px;
-    padding: 56px 50px 56px 50px;
+    max-width: 1195px;
+    padding: 28px 20px 28px 25px;
     border-radius: 30px ;
 }
 
 .lodging_card{
     display: flex;
-
+    margin: 28px 30px 25px 25px ;
     a{
     text-decoration: none;
     }

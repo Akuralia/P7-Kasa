@@ -1,8 +1,9 @@
 import React from "react";
 import Navbar from '../components/Navigation';
 import Banner from '../components/Banner';
-import Cards from '../components/Cards';
+import Card from '../components/Card';
 import Footer from '../components/Footer';
+import { useLoaderData} from 'react-router-dom';
 
 
 
@@ -10,12 +11,24 @@ import Footer from '../components/Footer';
 
 
 export default function Home() {
-return(
-    <>
-    <Navbar />
-    <Banner />
-    <Cards />
-    <Footer />
-    </>
+    const data = useLoaderData();
+    return(
+        <>
+        <Navbar />
+        <Banner className="banner" />
+        <div className="lodging_container">
+            {data.map((lodging) => (
+                <Card 
+                    path={'logement/'+ lodging.id}
+                    key={lodging.id}
+                    src={lodging.cover}
+                    alt={lodging.title}
+                    title={lodging.title}
+                    >
+                </Card>
+            ))}
+        </div>
+        <Footer />
+        </>
     )
 }

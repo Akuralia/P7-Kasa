@@ -1,11 +1,16 @@
-// Loader function
-export const lodgingLoader = async () => {
-    const res = await fetch('http://localhost:4000/lodging')
+import lodgingData from '../assets/lodging.json'
+import aboutData from '../assets/about.json'
 
-    return res.json()
+export const lodgingLoader = () => {
+    return lodgingData;
 }
-export const aboutLoader = async () => {
-    const res = await fetch('http://localhost:4200/about')
 
-    return res.json()
+export const aboutLoader = () => {
+    return aboutData;
 }
+
+
+
+
+
+
