@@ -1,0 +1,25 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.main_lodging_container{
+    margin: 0px 100px 0px 100px;
+    display: flex;
+    max-width: 1240px;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile-only{
+        margin: 0px 20px 14px 20px;
+    }
+}
+
+.equipements_description_container{
+    display: flex;
+    max-width: 1240px;
+    gap: 76px;
+    margin: 0px 100px 14px 100px;
+    @include mobile-only{
+        flex-direction: column;
+        margin: 0px 20px 14px 20px;
+    }
+}

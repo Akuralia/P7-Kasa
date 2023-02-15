@@ -1,0 +1,18 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+*{
+    font-family: $primary-font;
+
+};
+
+body {
+    max-width: 1440px;
+    margin: auto
+};
+
+@include mobile-only{
+    body{
+        max-width: 375px;
+    }
+}

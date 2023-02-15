@@ -18,11 +18,14 @@ export default function About() {
                 <Accordion 
                     title={about.header} 
                     content={about.description} 
-                    key={index}>
+                    key={index}
+                    nameClassContent={`accordion_content nbr_${index}`}
+                    nameClassTitle='accordion_title_about'
+                    >
                 </Accordion>
             ))}
         </div>
-        <Footer />
+        <Footer nameClass='about_footer'/>
         </>
     )
 

@@ -15,7 +15,8 @@ export default function Home() {
     return(
         <>
         <Navbar />
-        <Banner className="banner" />
+        <Banner />
+        <main>
         <div className="lodging_container">
             {data.map((lodging) => (
                 <Card 
@@ -28,6 +29,7 @@ export default function Home() {
                 </Card>
             ))}
         </div>
+        </main>
         <Footer />
         </>
     )

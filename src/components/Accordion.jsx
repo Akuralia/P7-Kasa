@@ -2,7 +2,7 @@ import React from "react"
 import { useState } from "react"
 import Arrow from '../assets/img/arrow_accordion.svg'
 
-function Accordion({ title, content }) {
+function Accordion({ title, content, nameClassContent, nameClassTitle }) {
   const [active, setActive] = useState(false)
 
   const handleToggle = e => {
@@ -10,10 +10,10 @@ function Accordion({ title, content }) {
   }
   return (
     <div className={`accordion ${active && "active"}`}>
-      <div className="accordion_title" onClick={handleToggle}>
+      <div className={nameClassTitle} onClick={handleToggle}>
         {title} <img className="accordion_icon" src={Arrow} alt="arrow"/>
       </div>
-      <div className="accordion_content">{content}</div>
+      <div className={nameClassContent}>{content}</div>
     </div>
   )
 }

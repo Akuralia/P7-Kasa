@@ -1,0 +1,28 @@
+@import '../utils/variables';
+
+.lodging_host_container{
+    display: flex;
+    max-width: 1240px;
+    max-height: 77px;
+}
+
+.lodging_host{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: end;
+    gap: 10px;
+    width: 170px;
+    p{
+        color: $primary-text-color;
+        font-size: 18px;
+    }
+
+    img{
+        width: 64px;
+        height: 64px;
+        border-radius: 100%;
+        background-color: #C4C4C4;
+    }
+}
+
