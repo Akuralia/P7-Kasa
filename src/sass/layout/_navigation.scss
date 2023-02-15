@@ -1,5 +1,8 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
 nav{
-    margin: 40px auto auto auto;
+    margin: 40px 100px auto 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,11 +24,26 @@ nav{
         }
     }
     .nav_link{
-        padding: 0px 0 0px 60px;
+        padding-left: 57px;
         text-decoration: none;
         font-size: 24px;
-        font-weight: medium;
-        color:#FF6060;
+        color: $primary-text-color;
+    }
+
+    @include mobile-only{
+        margin: 20px 20px 0px 20px;
+        width: 335px;
+        height: 47px;
+
+        .logo img{
+            width: 145px;
+            height: 47px;
+        }
+
+        .nav_link{
+            padding-left: 10px;
+            font-size: 12px;
+        }
     }
 }
 

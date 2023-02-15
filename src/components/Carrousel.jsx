@@ -17,18 +17,16 @@ export default function Carrousel({ pictures }) {
       
     return(    
         <div className="carrousel_container">
-            <div className="carrousel_content">
                 <img src={pictures[currentIndex]} alt = {pictures}/>
                 {pictures.length > 1 ? (
                   <>
-                    <span>
+                    <span className="pictures_counter">
                       {currentIndex + 1}/{pictures.length}
                     </span>
                     <img src={arrowPrevious} alt="arrow"  onClick={previousPicture} className="arrow_previous" />
                     <img src={arrowNext} alt="arrow" onClick={nextPicture} className="arrow_next" />
                   </>
             ) : null}
-            </div>
         </div>);
 
 }

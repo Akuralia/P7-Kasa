@@ -1,0 +1,15 @@
+@import '../utils/variables';
+
+.lodging_infos{
+    h1{
+        font-size: 36px;
+        color: $primary-text-color;
+    }
+
+    p{
+        margin-top: -15px;
+        font-size: 18px;
+        font-weight: 500;
+        color: $primary-text-color;
+    }
+}

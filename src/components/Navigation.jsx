@@ -14,7 +14,9 @@ return(
     <header>
         <nav>
             <div className='logo'>
+                <NavLink to ='/'>
                 <img src={logo} alt="logo Kasa" />
+                </NavLink>
             </div>
             <div>
                 <ul>

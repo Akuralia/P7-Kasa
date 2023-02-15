@@ -1,4 +1,4 @@
-@use 'utils/variables' ;
+@use 'utils/variables';
 
 @use 'utils/mixins' ;
 
@@ -12,14 +12,20 @@
 
 @use 'components/carrousel' ;
 
+@use 'components/host' ;
+
+@use 'components/infoslodging' ;
+
+@use 'components/rating' ;
+
+@use 'components/tag' ;
+
 @use 'layout/footer' ;
 
 @use 'layout/navigation' ;
 
-@use 'pages/home';
+@use 'pages/notfound';
+
+@use 'pages/allpages';
 
 @use 'pages/lodging';
-
-@use 'pages/about';
-
-@use 'pages/notfound';

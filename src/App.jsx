@@ -3,7 +3,7 @@ import Home from './pages/Home';
 import Lodging from './pages/Lodging';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
-import { lodgingLoader, aboutLoader } from './api/Api';
+import { lodgingsLoader, lodgingLoader, aboutLoader} from './api/Api';
 
 import './sass/main.scss'
 
@@ -13,7 +13,7 @@ export default function App() {
             path:'/',
             element: <Home />,
             errorElement: <NotFound/>,
-            loader: lodgingLoader
+            loader: lodgingsLoader
         },
         {
             path:'logement/:id',
