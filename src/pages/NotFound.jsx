@@ -9,7 +9,7 @@ export default function NotFound(){
             <Navbar />
             <div className='notfound_main'>
                 <h1>404</h1>
-                <p>Oups! La page que vous demandez n'existe pas.</p>
+                <p>Oups! La page que <br/>vous demandez n'existe pas.</p>
                 <Link to="/">
                     <span>Retourner sur la page d'accueil</span>
                 </Link>

@@ -1,14 +1,29 @@
 @import '../utils/variables';
+@import '../utils/mixins';
 
 .accordions{
-    margin-left: 208px;
-    margin-right: 209px;
+    display: flex;
+    flex-direction: column;
+    margin: 31px 209px 46px 208px;
+    gap: 31px;
+
+    @include mobile-only{
+    width: 335px;
+    margin: 19px 20px 0 20px;
+    gap: 20px;
+    }
+}
+
+.accordion_icon{
+    @include mobile-only{
+        width: 18.5px;
+        height: 18.5px;
+    }
 }
 
 .accordion_title_about {
     display: flex;
     position:relative ;
-    margin: 31px 0px 27px 0px;
     align-items: center;
     justify-content: space-between;
     background: $primary-text-color;
@@ -16,16 +31,19 @@
     height: 47px;
     font-size: 24px;
     padding-left: 18px;
-    padding-right: 30px;
+    padding-right: 32px;
     color: $secondary-text-color;
     border-radius: 8px;
     z-index: 1;
+    @include mobile-only{
+        height: 30px;
+        font-size: 13px;
+        padding-right: 8px;
+        }
 }
 
 .accordion_title_about:hover,
-.active .accordion_title_about {
-    cursor: pointer;
-}
+.active .accordion_title_about, 
 .accordion_title_lodging_equipement:hover,
 .active .accordion_title_lodging_equipement {
     cursor: pointer;
@@ -44,7 +62,7 @@
     border-radius: 0 0 8px 8px;
 }
 
-.active .accordion_content {
+.active .nbr_3 {
     margin: -40px 0px 31px 0px;
     padding: 36px 27px 19px 18px;
     max-width: 1023px;
@@ -53,49 +71,82 @@
     overflow: visible;
     opacity: 1;
     background-color: $secondary-background-color;
-    color:$primary-text-color;
-    font-size: 24px;
 	-webkit-animation: fade-in-top 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	animation: fade-in-top 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+    p{
+        color:$primary-text-color;
+        font-size: 24px;
+    }
+
+    @include mobile-only{
+        padding-top: 28px;
+        height: 150px;
+        margin-top: -25px;
+        p{
+            font-size: 12px;
+        }
+    }
 }
 .active .nbr_0, .active .nbr_1, .active .nbr_2 {
-    margin: -40px 0px 31px 0px;
+    margin-top: -30px;
+    padding-top: 36px;
     padding: 36px 27px 19px 18px;
     max-width: 1023px;
-    height: 129px;
+    height: 110px;
     visibility: visible;
     overflow: visible;
     opacity: 1;
     background-color: $secondary-background-color;
-    color:$primary-text-color;
-    font-size: 24px;
 	-webkit-animation: fade-in-top 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	animation: fade-in-top 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+    p{
+        color:$primary-text-color;
+        font-size: 24px;
+    }
+
+    @include mobile-only{
+        margin-top: -25px;
+        padding: 31px 7px 0px 11.5px;
+        height: 100px;
+        p{
+            font-size: 12px;
+        }
+    }
 }
 
 
 
 
 // LODGING PAGE
+
+
 .accordion{
-    flex-basis: 47%;
+    flex: 1;
+
+    @include mobile-only{
+    flex: 0;
+    }
 }
 
 .accordion_title_description_equipement {
     display: flex;
-    flex-basis: 50%;
     position:relative ;
-    margin: 31px 0px 31px 0px;
     align-items: center;
     justify-content: space-between;
     background: $primary-text-color;
     height: 52px;
     font-size: 18px;
     padding-left: 18px;
-    padding-right: 30px;
+    padding-right: 8px;
     color: $secondary-text-color ;
     border-radius: 8px;
     z-index: 1;
+
+    @include mobile-only{
+        height: 30px;
+    }
 }
 
 .lodging_description {
@@ -107,18 +158,30 @@
 }
 
 .active .lodging_description {
-    margin: -36px 0px 0px 0px;
-    padding: 40px 12px 53px 20px;
-    height: 156px;
+    margin-top: -36px;
+    padding: 45px 12px 34px 20px;
+    min-height: 156px;
     visibility: visible;
     overflow: visible;
     opacity: 1;
     background-color: $secondary-background-color;
-    color:$primary-text-color;
-    font-size: 18px;
 	-webkit-animation: fade-in-top 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	animation: fade-in-top 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    z-index: -1;
+
+    p{
+        color:$primary-text-color;
+        font-size: 18px;
+    }
+
+    @include mobile-only{
+        margin-top: -20px;
+        padding: 23px 7px 0px 12px;
+        height: 134px;
+
+        p{
+            font-size: 12px;
+        }
+    }
 }
 
 .lodging_equipements {
@@ -130,11 +193,15 @@
 }
 
 .active .lodging_equipements {
-    margin: -36px 0px 0px 0px;
-    padding: 40px 12px 27px 20px;
-    height: 182px;
+    display: flex;
+    flex-direction: column;
+    margin-top: -36px;
+    padding: 45px 12px 34px 20px;
+    min-height: 156px;
     visibility: visible;
-    overflow: visible;
+
+    
+    overflow: auto;
     opacity: 1;
     background-color: $secondary-background-color;
 	-webkit-animation: fade-in-top 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -143,7 +210,17 @@
     p{
         color:$primary-text-color;
         font-size: 18px;
-        margin-top: 8px;
-        line-height: 10px;
+        line-height: 0px;
+    }
+
+    @include mobile-only{
+        height: 179px;
+        margin-top: -20px;
+        padding: 23px 7px 0px 12px;
+        p{
+        font-size: 12px;
+        margin-top: 19px;
+        line-height: 2px;
+        }
     }
 }

@@ -3,25 +3,29 @@
 
 .tags_container{
     display: flex;
-    margin-top: -10px;
+
 
     span{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 115px;
+        min-width: 84px;
+        padding: 0px 15px 0 15px;
         height: 25px;
         margin-right: 10px;
-        border-radius: 14px;
+        border-radius: 10px;
         background-color: $third-background-color;
-
-
-    }
-    p{
         font-size: 14px;
         color: $secondary-text-color;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
     }
+
+    @include mobile-only{
+        flex-wrap: wrap;
+        row-gap: 10px;
+        span{
+        font-size: 10px;
+        height: 18px;
+        }
+    }
+
 }

@@ -1,10 +1,5 @@
 @import '../utils/variables';
-
-.lodging_host_container{
-    display: flex;
-    max-width: 1240px;
-    max-height: 77px;
-}
+@import '../utils/mixins';
 
 .lodging_host{
     display: flex;
@@ -13,16 +8,34 @@
     text-align: end;
     gap: 10px;
     width: 170px;
+
     p{
+        margin-top: 30px;
         color: $primary-text-color;
         font-size: 18px;
     }
 
     img{
+        margin-top: 20px;
+        margin-bottom: 4px;
         width: 64px;
         height: 64px;
         border-radius: 100%;
         background-color: #C4C4C4;
     }
+
+    @include mobile-only{
+        width: 100.5px;
+        gap: 10.5px;
+        p{
+            font-size: 12px;
+        }
+        
+        img{
+            width: 32px;
+            height: 32px;
+        }
+    }
+
 }
 

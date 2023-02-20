@@ -17,7 +17,7 @@ export default function Carrousel({ pictures }) {
       
     return(    
         <div className="carrousel_container">
-                <img src={pictures[currentIndex]} alt = {pictures}/>
+                <img className="carrousel_pictures" src={pictures[currentIndex]} alt = {pictures}/>
                 {pictures.length > 1 ? (
                   <>
                     <span className="pictures_counter">

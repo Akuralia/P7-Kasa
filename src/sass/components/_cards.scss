@@ -2,13 +2,16 @@
 @import '../utils/mixins';
 
 .lodging_container{
-    margin: 30px auto 40px auto;
+    margin: 43px 100px 40px 100px;
+    padding: 56px 50px 56px 50px;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     background-color: $secondary-background-color;
-    max-width: 1195px;
-    padding: 28px 20px 28px 25px;
+    max-width: 1140px;
     border-radius: 30px ;
+    row-gap: 50px;
+    column-gap: 60px;    
 
     @include mobile-only{
         flex-direction: column;
@@ -16,39 +19,43 @@
         margin: 22px 19px 40px 21px;
         padding: 0px;
         background-color: transparent;
+        row-gap: 20px; 
+        column-gap: 0px; 
     }
     
 }
 
 .lodging_card{
     display: flex;
-    margin: 28px 30px 25px 25px ;
+    width:340px;
+    height: 340px;
     border-radius: 12px;
-    background-color: $third-background-color;
-
     a{
-    text-decoration: none;
+        text-decoration: none;
     }
 
     img{
-        max-width:340px;
-        min-width: 255px;
-        max-height: 340px;
-        min-height: 340px;
+        position: relative;
+        width: 340px;
+        height: 340px;
         object-fit: cover;
         border-radius: 12px;
     }
 
     div {
+        position: absolute;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-end;
         display: flex;
-        max-width: 300px;
-        max-height: 52px;
-        margin-top: -70px;
-        margin-left: 15px;
-        
+        width: 340px;
+        height: 340px;
+        margin-top: -344px;
+        border-radius: 12px;
+        background-image: linear-gradient(180deg, rgba(255,255,0,0) 0%, rgba(0,0,0,0.5)100%);
         p{
+            flex:1;
+            margin-bottom: 20px;
+            margin-left: 20px;
             font-weight: 500;
             font-size: 18px;
             color: $secondary-text-color;
@@ -61,10 +68,18 @@
     }
 
     @include mobile-only{
-        
-        margin: 0px 0px 20px 0px ;
+        width:335px;
+        height: 255px;
+
+        div{
+            width:335px;
+            height: 255px;
+            margin-top: -259px;
+        }
+
         img{
             width:335px;
+            height: 255px;
         }
     }
 }

@@ -1,5 +1,5 @@
 @import '../utils/variables';
-
+@import '../utils/mixins';
 
 .notfound_main{
     display: flex;
@@ -25,5 +25,31 @@
         font-weight: medium;
         text-decoration: underline;
         
+    }
+
+    br{
+    display: none;
+    }
+
+    @include mobile-only{
+        margin-top: 105px;
+        margin-bottom: 235px;
+        h1{
+            font-size: 96px;
+        }
+
+        p{
+            margin: -55px 0 133px 0;
+            font-size: 18px;
+            line-height: 25px;
+        }
+
+        br{
+        display: block;
+        }
+        
+        span{
+            font-size: 14px;
+        }
     }
 }

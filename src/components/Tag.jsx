@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Tags({tagName}) {
     return(
-        <span>
-            <p className='tag'>{tagName}</p>
-        </span>
+
+            <span className='tag'>{tagName}</span>
+
         )
 }

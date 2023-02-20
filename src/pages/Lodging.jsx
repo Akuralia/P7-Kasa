@@ -35,7 +35,7 @@ export default function Logement() {
             title='Description'
             nameClassContent='lodging_description' 
             nameClassTitle='accordion_title_description_equipement'
-            content={data.description} 
+            content={<p>{data.description}</p>} 
             />
             <Accordion 
             title='Équipements' 
@@ -43,8 +43,8 @@ export default function Logement() {
             nameClassTitle='accordion_title_description_equipement'
             content=
             {
-                data.equipments.map((equipments) =>
-                <Equipments equipments={equipments}/>
+                data.equipments.map((equipments, index) =>
+                <Equipments key={index} equipments={equipments}/>
                 )
             } 
             />

@@ -1,15 +1,30 @@
 @import '../utils/variables';
+@import '../utils/mixins';
 
-.lodging_infos{
-    h1{
-        font-size: 36px;
-        color: $primary-text-color;
+.lodging_title{
+    display: flex;
+    margin-top: 24px;
+    font-size: 36px;
+    color: $primary-text-color;
+    font-weight: 500;
+
+    @include mobile-only{
+        font-size: 18px;
+        margin-top: 11px;
     }
+}
 
-    p{
-        margin-top: -15px;
+.lodging_location{
+    display: flex;
+        margin-top: -30px;
+        margin-bottom: 40px;
         font-size: 18px;
         font-weight: 500;
         color: $primary-text-color;
-    }
+
+        @include mobile-only{
+            font-size: 14px;
+            margin-top: -10px;
+            margin-bottom: 14px;
+        }
 }

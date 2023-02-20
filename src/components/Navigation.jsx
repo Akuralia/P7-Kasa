@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import logo from '../assets/img/logo.svg'
 
 export default function navbar() {
@@ -14,9 +14,9 @@ return(
     <header>
         <nav>
             <div className='logo'>
-                <NavLink to ='/'>
+                <Link to ='/'>
                 <img src={logo} alt="logo Kasa" />
-                </NavLink>
+                </Link>
             </div>
             <div>
                 <ul>

@@ -5,7 +5,7 @@ import About from './pages/About';
 import NotFound from './pages/NotFound';
 import { lodgingsLoader, lodgingLoader, aboutLoader} from './api/Api';
 
-import './sass/main.scss'
+import './sass/index.scss'
 
 export default function App() {
     const router = createBrowserRouter([

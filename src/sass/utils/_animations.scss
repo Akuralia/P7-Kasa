@@ -45,8 +45,8 @@
 // Animation du texte à l'ouverture
 @-webkit-keyframes fade-in-top {
     0% {
-      -webkit-transform: translateY(-43px);
-              transform: translateY(-43px);
+      -webkit-transform: translateY(-22px);
+              transform: translateY(-22px);
       opacity: 0;
     }
     100% {
@@ -58,8 +58,8 @@
   }
   @keyframes fade-in-top {
     0% {
-      -webkit-transform: translateY(-43px);
-              transform: translateY(-43px);
+      -webkit-transform: translateY(-22px);
+              transform: translateY(-22px);
       opacity: 0;
     }
     100% {

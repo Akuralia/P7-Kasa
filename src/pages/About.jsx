@@ -9,6 +9,7 @@ import { useLoaderData} from 'react-router-dom'
 
 export default function About() {
     const data = useLoaderData();
+
     return(
         <>
         <Navbar />
