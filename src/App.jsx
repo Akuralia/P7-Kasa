@@ -3,7 +3,8 @@ import Home from './pages/Home';
 import Lodging from './pages/Lodging';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
-import { lodgingsLoader, lodgingLoader, aboutLoader} from './api/Api';
+import { lodgingsLoader, aboutLoader, lodgingLoader} from './api/Api';
+
 
 import './sass/index.scss'
 

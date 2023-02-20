@@ -12,6 +12,11 @@ import { useLoaderData} from 'react-router-dom';
 
 export default function Logement() {
     const data = useLoaderData();
+
+
+
+
+    
     return(
         <>
         <Navbar  />

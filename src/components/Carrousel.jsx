@@ -5,6 +5,8 @@ import arrowNext from '../assets/img/arrow_next.svg'
 export default function Carrousel({ pictures }) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
+
+
     const previousPicture = () => {
         const newIndex = currentIndex - 1;
         setCurrentIndex(newIndex < 0 ? pictures.length - 1 : newIndex);
