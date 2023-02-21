@@ -10,9 +10,6 @@ In the project directory, you can run:
 
 To init the project and get all the modules of this project.
 
-### `npm run api`
-
-Run the JSON-Server to call the API
 
 ### `npm start`
 

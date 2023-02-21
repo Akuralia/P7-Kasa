@@ -4,8 +4,8 @@
     }
 }
 
-@mixin desktop-only {
-    @media screen and (min-width:992px){
+@mixin tablet-only {
+    @media screen and (max-width:992px){
         @content;
     }
 }

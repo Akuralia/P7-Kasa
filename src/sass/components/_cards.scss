@@ -23,6 +23,9 @@
         column-gap: 0px; 
     }
     
+    @include tablet-only{
+        justify-content: center;
+    }
 }
 
 .lodging_card{
