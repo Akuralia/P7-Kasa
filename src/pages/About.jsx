@@ -2,18 +2,23 @@ import React from "react";
 import Navbar from '../components/Navigation';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
-import Accordion from "../components/Accordion"
-import { useLoaderData} from 'react-router-dom'
+import Accordion from "../components/Accordion";
+import aboutBackground from '../assets/img/about_banner_background.jpg'
+import aboutBackgroundMobile from '../assets/img/about_banner_background_mobile.jpg'
 
+import { useLoaderData} from 'react-router-dom';
+import { getAbout } from "../controller/Controller";
 
+export async function aboutLoader(){
+    return await getAbout()
+} 
 
-export default function About() {
+export function About() {
     const data = useLoaderData();
-
     return(
         <>
         <Navbar />
-        <Banner className="about_banner" />
+        <Banner className="about_banner" mobile={aboutBackgroundMobile} desktop={aboutBackground} />
         <div className="accordions">
             {data.map((about, index) => (
                 <Accordion 

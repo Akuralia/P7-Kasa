@@ -10,6 +10,11 @@
     max-width: 1240px;
     height: 223px;
     
+    picture{
+    width: 100%;
+    height: 100%;
+    }
+
     p{
         position: absolute;
         font-size: 54px;
@@ -43,13 +48,22 @@
     max-width: 1240px;
     height: 223px;
 
+    picture{
+    width: 100%;
+    height: 100%;
+    }
+    
     img{
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 15px;
+        border-radius: 15px; 
     }
 
+    p{
+        overflow: hidden;
+        visibility: hidden;
+    }
     @include mobile-only{
         margin: 60px auto 13px auto ;
         width: 336px;

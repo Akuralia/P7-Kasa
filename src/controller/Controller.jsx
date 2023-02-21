@@ -1,23 +1,22 @@
 import lodgingData from '../assets/lodging.json'
 import aboutData from '../assets/about.json'
 
-export function aboutLoader() {
-    return aboutData;
-}
-
-export function lodgingsLoader(){
+export function getLodgings(){
     return lodgingData;
 }
 
-function getOneLodging(id){
+export function getOneLodging(id){
     if (!id) return undefined;
 
     return lodgingData.find((lodging) => lodging.id === id);
 }
 
-export async function lodgingLoader({params}) {
-    return await getOneLodging(params.id);
+export function getAbout() {
+    return aboutData;
 }
+
+
+
 
 
 

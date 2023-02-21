@@ -4,15 +4,15 @@ import arrowNext from '../assets/img/arrow_next.svg'
 
 export default function Carrousel({ pictures }) {
     const [currentIndex, setCurrentIndex] = useState(0);
-
-
-
+    pictures.forEach(picture => {
+      const image = new Image();
+      image.src = picture 
+    });
     const previousPicture = () => {
         const newIndex = currentIndex - 1;
         setCurrentIndex(newIndex < 0 ? pictures.length - 1 : newIndex);
       };
-    
-      const nextPicture = () => {
+    const nextPicture = () => {
         const newIndex = currentIndex + 1;
         setCurrentIndex(newIndex >= pictures.length ? 0 : newIndex);
       };

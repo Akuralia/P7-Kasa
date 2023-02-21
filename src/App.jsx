@@ -1,9 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from './pages/Home';
-import Lodging from './pages/Lodging';
-import About from './pages/About';
+import {Home, homeLoader} from './pages/Home';
+import {Lodging, lodgingLoader} from './pages/Lodging';
+import {About, aboutLoader} from './pages/About';
 import NotFound from './pages/NotFound';
-import { lodgingsLoader, aboutLoader, lodgingLoader} from './api/Api';
 
 
 import './sass/index.scss'
@@ -14,7 +13,7 @@ export default function App() {
             path:'/',
             element: <Home />,
             errorElement: <NotFound/>,
-            loader: lodgingsLoader
+            loader: homeLoader
         },
         {
             path:'logement/:id',

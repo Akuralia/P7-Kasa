@@ -9,14 +9,20 @@ import Rating from '../components/Rating';
 import Accordion from '../components/Accordion';
 import Equipments from '../components/Equipments';
 import { useLoaderData} from 'react-router-dom';
+import { getOneLodging } from '../controller/Controller';
 
-export default function Logement() {
+export async function lodgingLoader({params}) {
+
+    return await getOneLodging(params.id);
+}
+
+export function Lodging() {
     const data = useLoaderData();
 
 
 
 
-    
+
     return(
         <>
         <Navbar  />
